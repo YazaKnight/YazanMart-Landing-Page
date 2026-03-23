@@ -30,3 +30,93 @@ header {
     padding: 1rem;
     text-align: center;
 }
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.shopping-section {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.shopping-boxes {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rounded-box {
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.rounded-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.left-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.right-box {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.box-content {
+    text-align: center;
+    color: white;
+}
+
+.box-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.box-content p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .rounded-box {
+        width: 250px;
+        height: 200px;
+    }
+    
+    .box-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .box-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rounded-box {
+        width: 200px;
+        height: 150px;
+    }
+    
+    .box-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .box-content p {
+        font-size: 1rem;
+    }
+}
